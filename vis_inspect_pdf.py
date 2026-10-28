@@ -108,7 +108,7 @@ class vis_ins:
         
         self.i=0
         self.img1 = convert_from_path(self.filepath+str(self.files[self.i_list[self.i]]))[0]
-        self.img1 = self.img1.resize((int(self.img1.width/2), int(self.img1.height/2)), Image.LANCZOS)
+        self.img1 = self.img1.resize((int(self.img1.width/1.5), int(self.img1.height/1.5)), Image.LANCZOS)
         # self.img1 = Image.open(self.filepath+str(self.files[self.i_list[self.i]]))
         self.img1 = ImageTk.PhotoImage(self.img1, master=self.root)
         # self.img1 = PhotoImage(self.img1.tobytes(), master=self.root)
@@ -269,7 +269,7 @@ class vis_ins:
             self.e4.delete(0, 'end')       
             self.i += 1
             self.new_image = convert_from_path(self.filepath+str(self.files[self.i_list[self.i]]))[0]
-            self.new_image = self.new_image.resize((int(self.new_image.width/2), int(self.new_image.height/2)), Image.LANCZOS)
+            self.new_image = self.new_image.resize((int(self.new_image.width/1.5), int(self.new_image.height/1.5)), Image.LANCZOS)
             self.new_image = ImageTk.PhotoImage(self.new_image, master=self.root)
             self.imgl.config(image=self.new_image)
             self.imgl.image = self.new_image
@@ -307,7 +307,7 @@ class vis_ins:
                 self.e4.delete(0, 'end')
                 self.load_current_comments()  # <-- Load saved comment if exists
                 self.new_image = convert_from_path(self.filepath+str(self.files[self.i_list[self.i]]))[0]
-                self.new_image = self.new_image.resize((int(self.new_image.width/2), int(self.new_image.height/2)), Image.LANCZOS)
+                self.new_image = self.new_image.resize((int(self.new_image.width/1.5), int(self.new_image.height/1.5)), Image.LANCZOS)
                 self.new_image = ImageTk.PhotoImage(self.new_image, master=self.root)
                 self.imgl.config(image=self.new_image)
                 self.imgl.image = self.new_image
@@ -328,7 +328,7 @@ class vis_ins:
             self.e4.delete(0, 'end')
             self.i -= 1
             self.new_image = convert_from_path(self.filepath+str(self.files[self.i_list[self.i]]))[0]
-            self.new_image = self.new_image.resize((int(self.new_image.width/2), int(self.new_image.height/2)), Image.LANCZOS)
+            self.new_image = self.new_image.resize((int(self.new_image.width/1.5), int(self.new_image.height/1.5)), Image.LANCZOS)
             self.new_image = ImageTk.PhotoImage(self.new_image, master=self.root)
             self.imgl.config(image=self.new_image)
             self.imgl.image = self.new_image
